@@ -16,6 +16,9 @@ st.set_page_config(
 openai_api_key = st.secrets["openai_apikey"]
 firecrawl_api_key = st.secrets["firecrawl_apikey"]
 
+if firecrawl_key and openai_key:
+         st.session_state.firecrawl_key = firecrawl_key
+         st.session_state.openai_key = openai_key
 # Main content
 st.title("📘 OpenAI Deep Research Agent")
 st.markdown("This OpenAI Agent from the OpenAI Agents SDK performs deep research on any topic using Firecrawl")
