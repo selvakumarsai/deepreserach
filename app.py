@@ -14,6 +14,7 @@ st.set_page_config(
 )
 
 openai_api_key = st.secrets["openai_apikey"]
+set_default_openai_key(openai_api_key)
 firecrawl_api_key = st.secrets["firecrawl_apikey"]
 
 if firecrawl_api_key and openai_api_key:
