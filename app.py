@@ -13,16 +13,8 @@ st.set_page_config(
     layout="wide"
 )
 
-# Initialize session state for API keys if not exists
-if "openai_api_key" not in st.session_state:
-    st.session_state.openai_api_key = ""
-if "firecrawl_api_key" not in st.session_state:
-    st.session_state.firecrawl_api_key = ""
-
-# Sidebar for API keys
-
-st.session_state.openai_api_key = st.secrets["openai_apikey"]
-st.session_state.firecrawl_api_key = st.secrets["firecrawl_apikey"]
+openai_api_key = st.secrets["openai_apikey"]
+firecrawl_api_key = st.secrets["firecrawl_apikey"]
 
 # Main content
 st.title("📘 OpenAI Deep Research Agent")
